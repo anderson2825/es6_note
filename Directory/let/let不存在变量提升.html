@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+    console.log("es5:");
+    var a=[];
+    for(var i=0;i<10;i++){
+      var c=i;
+      a[i]=function() {
+         console.log(c);
+      };
+    };
+		a[5](); 
+
+    console.log("es6:");
+
+    var b=[];
+    for(var j=0;j<10;j++){
+      let d=j;
+      b[j]=function(){
+        console.log(d);
+      }
+    }
+
+    b[5]();
+
+</script>
+</body>
+</html>
