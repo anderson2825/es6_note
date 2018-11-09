@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript">
+    	let {foo:baz}={foo:"變量名和属性名不一样,对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。"};   
+	    console.log(baz);
+	    let {foo2:bas,foo3} ={foo2:"foo2是匹配的模式，bas才是变量。真正被赋值的是变量bas，而不是模式foo2。",foo3:"testa"}
+	    console.log(bas);
+	    console.log(foo3);
+	    console.log(foo2);  
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
