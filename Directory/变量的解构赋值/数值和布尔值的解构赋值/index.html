@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript">
+   		let {toString:s}=123;
+   		console.log(s===Number.prototype.toString);
+   		let {toString:x}=false;
+   		console.log(x===Boolean.prototype.toString);
+   		console.log(s.toString,x);
+   		/*数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。*/
+   		let { prop: z } = undefined; // TypeError
+		let { prop: y } = null; // TypeError
+		/*解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
