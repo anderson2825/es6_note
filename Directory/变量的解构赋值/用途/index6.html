@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript">
+   		const map=new Map();
+   		map.set('first','hello');
+   		map.set('second','world');
+   		for(let [key,value] of map){
+   			console.log(key + " is " +value);
+   		}
+
+		   		// 获取键名
+		for (let [key] of map) {
+		  // ...
+		}
+
+		// 获取键值
+		for (let [,value] of map) {
+		  // ...
+		}
+	</script>
+</head>
+<body>
+	<!-- 指定参数的默认值，就避免了在函数体内部再写var foo = config.foo || 'default foo';这样的语句-->
+</body>
+</html>
