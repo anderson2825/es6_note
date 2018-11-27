@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		let [(a)]=[1];
+		let {(a:b)}={};
+		let ({a:b})={};
+		let {(a):b}={};
+		let {a:(b)}={};
+		let {o:({p:p})}={o：{p:2}};
+	</script>
+</head>
+<body>
+	<!--不能使用圆括号,因为它们都是变量声明语句，模式不能使用圆括号。-->
+</body>
+</html>
