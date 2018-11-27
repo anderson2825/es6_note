@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript">
+  		function move({x,y}={x:0,y:0}) {
+  			return [x,y];
+  		}
+  		console.log(move({x:3,y:5}));
+		console.log(move({x:3}));
+		console.log(move({}));
+		console.log(move());  		
+	</script>
+</head>
+<body>
+	<!-- 函数move的参数指定默认值，而不是为变量x和y指定默认值，所以会得到与前一种写法不同的结果。-->
+	
+</body>
+</html>
