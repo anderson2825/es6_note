@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script  charset="utf-8">
+		function user(name,age) {
+			this.name=name;
+			this.age=age;
+		}
+
+		user.getClassNmae=function() {
+			 return 'user';
+		}
+		user.prototype.changeName = function(name) {			
+			this.name=name;			
+		};
+		user.prototype.changeAge = function(age) {
+			 this.age=age;
+		}
+		Object.defineProperty(user.prototype,'info',{
+			get(){
+				return 'name: ' +this.name +'| age:' +this.age;
+			}
+		})
+
+		//子类
+	 	function Manager(name,age,password) {
+	 		user.call(this,name,age);
+	 		this.password=password;
+	 	};
+	 	//继承静态方法
+	 	Manager._proto_=user;
+
+	 	//继承 prototype 方法
+	 	Manager.prototype=user.prototype;
+
+	 	//添加新方法
+
+	 	Manager.prototype.changePassword=function(password) {
+	 		this.password=password;
+	 	};
+
+	 	var manager=new Manager('leo',21,'1234');
+	 	manager.changeAge(20);
+	 	console.log(manager.age);
+	 	console.log(manager.info);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
