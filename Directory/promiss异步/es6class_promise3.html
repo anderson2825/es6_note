@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		 
+		class User{
+			constructor(name,password){
+				this.name=name;
+				this.password=password;
+			}
+
+			validateName(cb){
+				let name =this.name;
+				return new Promise(function(resolve,reject) {
+					setTimeout(function() {
+						if(name === "leo"){
+							resolve('success');	
+						}else{
+							reject('error');
+						}	
+					})
+				})
+			}
+			validatePassword(cb){
+				let password =this.password;
+				return new Promise(function(resolve,reject) {
+					setTimeout(function() {
+						if(password === "abcdef"){
+							resolve('success');	
+						}else{
+							reject('error');
+						}	
+					})
+				})
+			}			
+		}
+
+		const user=new User("leo");
+		user.validateName()
+			.then(function (result) {
+				return 'validat name ok';
+			})
+			.then(function(result) {
+				console.log(result);
+			})
+ 	</script>
+</body>
+</html>

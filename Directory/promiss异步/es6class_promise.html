@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		 
+		class User{
+			constructor(name){
+				this.name=name;
+			}
+
+			send(cb){
+				let name =this.name;
+				return new Promise(function(resolve,reject) {
+					setTimeout(function() {
+						if(name === "leo"){
+							resolve('success');	
+						}else{
+							reject('error');
+						}	
+					})
+				})
+			}
+		}
+
+		const user=new User("leo");
+		user.send()
+			.then(function (success) {
+				console.log(success);
+			}).catch(function (err) {
+				console.log(err);
+			});
+ 	</script>
+</body>
+</html>
